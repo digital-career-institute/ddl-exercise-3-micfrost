@@ -1,0 +1,17 @@
+use mydb;
+CREATE TABLE Planets (
+    planet_id INTEGER,
+    planet_name VARCHAR(50) NOT NULL,
+    diameter DECIMAL,
+    distance_from_sun DECIMAL NULL
+);
+ALTER TABLE Planets
+MODIFY COLUMN diameter DECIMAL NOT NULL;
+CREATE TABLE Galaxies (
+    galaxy_id INTEGER PRIMARY KEY,
+    galaxy_name VARCHAR(50) NOT NULL,
+    description TEXT,
+    number_of_stars INTEGER
+);
+DROP TABLE Galaxies;
+describe Planets;
